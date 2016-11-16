@@ -1,0 +1,44 @@
+{# <!DOCTYPE html> #}
+{#  #}
+{# {% load staticfiles %} #}
+{#  #}
+{# <html> #}
+{#     <head> #}
+{#         <title>About Rango</title> #}
+{#     </head> #}
+{#     </body> #}
+{#         <h1>Rango says here is the about page.</h1> #}
+{#         <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" /> #}
+{#     </body> #}
+{# </html> #}
+
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}About Rango{% endblock %}
+
+{# {% block body_block %} #}
+{#     <h1>Rango says here is the about page.</h1> #}
+{#     <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango"/> #}
+{# {% endblock %} #}
+
+{% block body_block %}
+    <div class="page-header">
+                <h1>About</h1>
+            </div>
+            <div>
+            <p></strong>.</p>
+
+            <img  width="450" height="500" src="{% static "images/rango.jpg" %}" alt="Picture of Rango" /> <!-- New line -->
+            <button onClick="alert('You clicked the button using Javascript.');">
+                Click Me - I run Javascript
+            <p>This is an example</p>
+            </button>
+
+            <button id="about-btn">Click Me - I'm Javascript on Speed <p>This is another example</p></button>
+
+            <div id="msg">Hello</div>
+    </div>
+{% endblock %}
+
